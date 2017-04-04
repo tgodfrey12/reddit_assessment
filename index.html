@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form name="newUser" method="post" action="/users">
+    <h1>Insert User</h1>
+    <p>
+      <label for="newUser">Full Name</label>
+      <input type="text" id="fullName" placeholder="Full Name" name="user[full_name]" autofocus/>
+    </p>
+    <p>
+      <label for="newUser">User Name</label>
+      <input type="text" id="user_name" placeholder="User Name" name="user[user_name]" autofocus/>
+    </p>
+    <p>
+      <label for="newUser">Image URL</label>
+      <input type="text" id="img_url" placeholder="Image URL" name="user[img_url]" />
+    </p>
+    <p>
+      <button type="submit">Submit</button>
+    </p>
+    </form>
+  </body>
+</html>

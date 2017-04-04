@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form name="updateUser" method="put" action="/users">
+    <h1>Update User</h1>
+    <p>
+      <label for="updateUser">User ID</label>
+      <input type="text" id="userID" placeholder="User ID" name="user[id]" autofocus/>
+    </p>
+    <p>
+      <label for="updateUser">Full Name</label>
+      <input type="text" id="full_name" placeholder="Full Name" name="user[full_name]" autofocus/>
+    </p>
+    <p>
+      <label for="updateUser">User Name</label>
+      <input type="text" id="user_name" placeholder="User Name" name="user[user_name]" autofocus/>
+    </p>
+    <p>
+      <label for="updateUser">Image URL</label>
+      <input type="text" id="img_url" placeholder="Image URL" name="user[img_url]" />
+    </p>
+    <p>
+      <button type="submit">Update User</button>
+    </p>
+    </form>
+  </body>
+</html>

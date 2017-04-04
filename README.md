@@ -25,5 +25,7 @@ Create an app.js file
     Delete
       Implment knex update with parm for UserID
 
+Create Views Folder to hold the ejs files
+
 Implement ejs
   Create files in the views directory for each route
