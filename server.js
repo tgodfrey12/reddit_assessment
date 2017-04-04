@@ -39,16 +39,21 @@ app.get('/users/new', function(req, res) {
 
 //Render the data entry page to update a user
 app.get('/users/update', function(req, res) {
-
-    console.log(req.body);
     res.render('users/update');
+});
 
+//Update the user and show the user's data with updates
+app.put('/users/UpdateUser', function(req, res) {
+    console.log('In the update route');
     // knex('users')
     //     .where('id', req.params.userID)
     //     .update({
     //
     //     })
-});
+
+})
+
+
 
 //Add a user
 app.post('/users', function(req, res) {
@@ -64,6 +69,8 @@ app.post('/users', function(req, res) {
         });
 
 });
+
+
 
 
 
@@ -90,13 +97,6 @@ app.get('/users/:userID', function(req, res) {
             console.log(err);
         });
 });
-
-//Add a user
-
-//Update a single User
-// app.put('/users/:userID', function(req, res) {
-//
-// });
 
 app.listen(3000, function() {
     console.log("Server is listening on port 3000");
