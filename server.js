@@ -19,14 +19,15 @@ const knex = require('knex')(config);
 
 
 //Get all users
-app.get('/users', function(req, res) {
+app.get('/users/displayAll', function(req, res) {
+    console.log("In get all users route");
+
     knex('users').then((users) => {
-            console.log(users);
-            res.send(users);
-        })
-        .catch((err) => {
-            console.log(err);
+        console.log(users);
+        res.render('users/index', {
+            users
         });
+    });
 });
 
 //Render the data entry page to insert a user
@@ -39,11 +40,17 @@ app.get('/users/new', function(req, res) {
 //Render the data entry page to update a user
 app.get('/users/update', function(req, res) {
 
-    //console.log('Get new user route');
+    console.log(req.body);
     res.render('users/update');
+
+    // knex('users')
+    //     .where('id', req.params.userID)
+    //     .update({
+    //
+    //     })
 });
 
-
+//Add a user
 app.post('/users', function(req, res) {
     //console.log(req.body);
 
@@ -56,16 +63,6 @@ app.post('/users', function(req, res) {
             console.log("Error inserting user " + e);
         });
 
-});
-
-app.put('/users', function(req, res) {
-    console.log("In user update route");
-    res.return("In user update route");
-    // knex('users')
-    // .where('id', req.params.userID)
-    // .update({
-    //
-    // })
 });
 
 
